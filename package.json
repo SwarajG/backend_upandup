@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "run": "node index.js"
+  },
   "dependencies": {
     "cors": "^2.8.3",
     "express": "^4.15.3",
