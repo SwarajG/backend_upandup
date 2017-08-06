@@ -1,4 +1,4 @@
-const db = require('./db');
+const db = require('../db');
 module.exports = {
   getAllUsers: () => {
     const collection = db.get().collection('testCollection');

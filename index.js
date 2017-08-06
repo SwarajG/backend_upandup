@@ -4,8 +4,9 @@ const schema = require('./schema');
 
 const db = require('./db');
 const model = require('./model');
-
 const cors = require('cors');
+const Config = require('./config');
+const config = Config();
 
 const app = express();
 
@@ -18,7 +19,7 @@ app.use('/graphql', cors(), graphQLHTTP({
   graphiql: true,
 }));
 
-db.connect('mongodb://localhost:27017/local', (err) => {
+db.connect(config.mongodbUrl, (err) => {
   if (err) {
     console.log('Unable to connect to Mongo.');
     process.exit(1);
