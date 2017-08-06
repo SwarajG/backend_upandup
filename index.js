@@ -10,6 +10,7 @@ const config = Config();
 
 const app = express();
 
+app.use(express.static('public'))
 app.get('/test', (req, res) => {
   model.getAllUsers().then((response) => res.send(response));
 });

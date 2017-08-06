@@ -7,7 +7,7 @@
   "author": "SwarajG <gandhiswaraj9067008148@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "run": "node index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "cors": "^2.8.4",
