@@ -1,16 +1,19 @@
 {
-  "name": "graphql-test",
+  "name": "backend_upandup",
   "version": "1.0.0",
+  "description": "backend for the upandup site",
   "main": "index.js",
+  "repository": "https://github.com/SwarajG/backend_upandup.git",
+  "author": "SwarajG <gandhiswaraj9067008148@gmail.com>",
   "license": "MIT",
   "scripts": {
     "run": "node index.js"
   },
   "dependencies": {
-    "cors": "^2.8.3",
+    "cors": "^2.8.4",
     "express": "^4.15.3",
-    "express-graphql": "^0.6.6",
-    "graphql": "^0.10.3",
-    "mongodb": "^2.2.29"
+    "express-graphql": "^0.6.7",
+    "graphql": "^0.10.5",
+    "mongodb": "^2.2.30"
   }
 }
