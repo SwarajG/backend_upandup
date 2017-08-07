@@ -11,19 +11,17 @@ exports.connect = (url, done) => {
     if (err) return done(err);
     state.db = db;
     done();
-  })
-}
+  });
+};
 
-exports.get = () => {
-  return state.db;
-}
+exports.get = () => state.db;
 
 exports.close = (done) => {
   if (state.db) {
-    state.db.close((err, result) => {
+    state.db.close((err) => {
       state.db = null;
       state.mode = null;
       done(err);
-    })
+    });
   }
 };

@@ -10,15 +10,15 @@ module.exports = new GraphQLObjectType({
   fields: () => ({
     f_name: {
       type: GraphQLString,
-       resolve: (user) => user.f_name,
+      resolve: user => user.f_name,
     },
     l_name: {
       type: GraphQLString,
-      resolve: (user) => user.l_name,
+      resolve: user => user.l_name,
     },
     age: {
       type: GraphQLInt,
-      resolve: (user) => user.age,
-    }
-  })
+      resolve: user => user.age,
+    },
+  }),
 });

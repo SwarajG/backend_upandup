@@ -5,6 +5,7 @@ const schema = require('./schema');
 const db = require('./db');
 const cors = require('cors');
 const Config = require('./config');
+
 const config = Config();
 
 const app = express();

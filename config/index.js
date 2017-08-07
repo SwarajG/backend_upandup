@@ -2,7 +2,7 @@ const devSettings = require('./devSettings');
 const prodSettings = require('./prodSettings');
 
 module.exports = () => {
-  switch(process.env.NODE_ENV){
+  switch (process.env.NODE_ENV) {
     case 'dev':
       return devSettings;
 
@@ -11,5 +11,5 @@ module.exports = () => {
 
     default:
       return devSettings;
-  };
+  }
 };
