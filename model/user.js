@@ -1,7 +1,7 @@
 const db = require('../db');
 module.exports = {
   getAllUsers: () => {
-    const collection = db.get().collection('testCollection');
+    const collection = db.get().collection('User');
     const promise = new Promise((resolve, reject) => {
       collection.find().toArray((err, docs) => {
         resolve(docs);
@@ -10,7 +10,7 @@ module.exports = {
     return promise;
   },
   createNewUser: (newUser) => {
-    const collection = db.get().collection('testCollection');
+    const collection = db.get().collection('User');
     const promise = new Promise((resolve, reject) => {
       collection.insert(newUser, (err, result) => {
         collection.find(newUser).toArray((err, docs) => {
