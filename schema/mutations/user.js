@@ -3,7 +3,6 @@ const graphql = require('graphql');
 const GraphQLNonNull = graphql.GraphQLNonNull;
 const GraphQLString = graphql.GraphQLString;
 const GraphQLBoolean = graphql.GraphQLBoolean;
-const GraphQLID = graphql.GraphQLID;
 const GraphQLInputObjectType = graphql.GraphQLInputObjectType;
 
 const model = require('../../model/user');
@@ -12,9 +11,6 @@ const UserType = require('../types/user');
 const UserInputType = new GraphQLInputObjectType({
   name: 'UserInputType',
   fields: () => ({
-    uid: {
-      type: GraphQLID,
-    },
     f_name: {
       type: new GraphQLNonNull(GraphQLString),
     },

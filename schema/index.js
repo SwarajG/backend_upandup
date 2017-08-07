@@ -11,6 +11,7 @@ const QueryType = new GraphQLObjectType({
   description: 'List of all the queries',
   fields: () => ({
     users: queries.user.getAllUsers,
+    user: queries.user.getUserByUID,
   }),
 });
 

@@ -7,10 +7,10 @@ const state = {
 exports.connect = (url, done) => {
   if (state.db) return done();
 
-  MongoClient.connect(url, (err, db) => {
+  return MongoClient.connect(url, (err, db) => {
     if (err) return done(err);
     state.db = db;
-    done();
+    return done();
   });
 };
 

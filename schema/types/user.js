@@ -2,23 +2,31 @@ const graphql = require('graphql');
 
 const GraphQLObjectType = graphql.GraphQLObjectType;
 const GraphQLString = graphql.GraphQLString;
-const GraphQLInt = graphql.GraphQLInt;
+const GraphQLNonNull = graphql.GraphQLNonNull;
 
 module.exports = new GraphQLObjectType({
   name: 'User',
   description: 'user description',
   fields: () => ({
     f_name: {
-      type: GraphQLString,
+      type: new GraphQLNonNull(GraphQLString),
       resolve: user => user.f_name,
     },
     l_name: {
-      type: GraphQLString,
+      type: new GraphQLNonNull(GraphQLString),
       resolve: user => user.l_name,
     },
-    age: {
-      type: GraphQLInt,
-      resolve: user => user.age,
+    user_pic: {
+      type: new GraphQLNonNull(GraphQLString),
+      resolve: user => user.user_pic,
+    },
+    phone_number: {
+      type: new GraphQLNonNull(GraphQLString),
+      resolve: user => user.phone_number,
+    },
+    email: {
+      type: new GraphQLNonNull(GraphQLString),
+      resolve: user => user.email,
     },
   }),
 });

@@ -7,15 +7,20 @@
   "author": "SwarajG <gandhiswaraj9067008148@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js"
   },
   "dependencies": {
+    "biguint-format": "^1.0.0",
     "cors": "^2.8.4",
     "eslint": "^4.4.0",
     "express": "^4.15.3",
     "express-graphql": "^0.6.7",
+    "flake-idgen": "^1.1.0",
     "graphql": "^0.10.5",
-    "mongodb": "^2.2.30"
+    "mongodb": "^2.2.30",
+    "mongoose": "4.10.8",
+    "nodemon": "^1.11.0",
+    "object-hash": "^1.1.8"
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^11.3.1",
