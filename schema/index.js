@@ -20,6 +20,7 @@ const MutationType = new GraphQLObjectType({
   description: 'List of all the mutations',
   fields: () => ({
     createUser: mutations.user.createUser,
+    deleteUser: mutations.user.deleteUser,
   }),
 });
 

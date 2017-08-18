@@ -4,7 +4,6 @@ const graphql = require('graphql');
 
 const GraphQLList = graphql.GraphQLList;
 const GraphQLString = graphql.GraphQLString;
-const GraphQLNonNull = graphql.GraphQLNonNull;
 
 module.exports = {
   getAllUsers: {
@@ -16,7 +15,7 @@ module.exports = {
     args: {
       uid: {
         name: 'uid',
-        type: new GraphQLNonNull(GraphQLString),
+        type: GraphQLString,
       },
     },
     resolve: (_, params) => model.getUserByUID(params.uid).then(response => response),

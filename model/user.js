@@ -47,4 +47,13 @@ module.exports = {
     });
     return promise;
   },
+  deleteUser: (uid) => {
+    const promise = new Promise((resolve, reject) => {
+      User.find({ uid }).remove((err) => {
+        if (err) reject(err);
+        resolve('user deleted');
+      });
+    });
+    return promise;
+  },
 };

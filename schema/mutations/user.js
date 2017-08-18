@@ -32,6 +32,12 @@ const UserInputType = new GraphQLInputObjectType({
     email: {
       type: new GraphQLNonNull(GraphQLString),
     },
+    facebook_id: {
+      type: GraphQLString,
+    },
+    google_id: {
+      type: GraphQLString,
+    },
   }),
 });
 
@@ -43,5 +49,15 @@ module.exports = {
       user: { type: UserInputType },
     },
     resolve: (value, { user }) => model.createNewUser(user),
+  },
+  deleteUser: {
+    type: UserType,
+    description: 'Delete the user',
+    args: {
+      uid: {
+        type: new GraphQLNonNull(GraphQLString),
+      },
+    },
+    resolve: (value, { uid }) => model.deleteUser(uid),
   },
 };
