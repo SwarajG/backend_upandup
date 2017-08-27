@@ -12,6 +12,11 @@ const QueryType = new GraphQLObjectType({
   fields: () => ({
     users: queries.user.getAllUsers,
     user: queries.user.getUserByUID,
+    address: queries.address.getAddressByAddressId,
+    category: queries.category.getCategoryByCategoryId,
+    // outlet: queries.outlet.getOutletById,
+    // menuItem: queries.menuItem.getMenuItemById,
+    // order: queries.order.getOrderById,
   }),
 });
 

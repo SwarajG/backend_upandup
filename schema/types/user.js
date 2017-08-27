@@ -27,5 +27,13 @@ module.exports = new GraphQLObjectType({
       type: GraphQLString,
       resolve: user => user.email,
     },
+    facebookId: {
+      type: GraphQLString,
+      resolve: user => user.facebookId,
+    },
+    googleId: {
+      type: GraphQLString,
+      resolve: user => user.googleId,
+    },
   }),
 });

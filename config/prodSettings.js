@@ -9,4 +9,5 @@ module.exports = {
     clientSecret: '86dcb8bbf6d33ed5d153d195cb122fb8',
     callbackURL: 'http://localhost:8080/auth/facebook/callback',
   },
+  corsURL: 'http://localhost:8080',
 };

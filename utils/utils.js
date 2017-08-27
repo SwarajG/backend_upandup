@@ -8,5 +8,5 @@ const encode = require('object-hash');
 
 module.exports = {
   getUniqueId: () => intformat(generator.next(), 'dec'),
-  securePassword: password => encode(`${password}${customEnum.passwordSalt}`),
+  securePassword: password => encode(`${password}${customEnum.PASSWORDSALT}`),
 };

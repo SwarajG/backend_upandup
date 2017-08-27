@@ -48,7 +48,7 @@ module.exports = {
     args: {
       user: { type: UserInputType },
     },
-    resolve: (value, { user }) => model.createNewUser(user),
+    resolve: (value, { user }) => model.create(user),
   },
   deleteUser: {
     type: UserType,
