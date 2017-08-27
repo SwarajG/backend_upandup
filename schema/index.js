@@ -14,9 +14,9 @@ const QueryType = new GraphQLObjectType({
     user: queries.user.getUserByUID,
     address: queries.address.getAddressByAddressId,
     category: queries.category.getCategoryByCategoryId,
-    // outlet: queries.outlet.getOutletById,
-    // menuItem: queries.menuItem.getMenuItemById,
-    // order: queries.order.getOrderById,
+    outlet: queries.outlet.getOutletByOutletId,
+    menuItem: queries.menuItem.getMenuItemByMenuItemId,
+    order: queries.order.getOrderByOrderId,
   }),
 });
 

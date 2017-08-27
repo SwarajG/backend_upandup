@@ -9,7 +9,7 @@ module.exports = {
   user,
   address,
   category,
-  // menuItem,
-  // order,
-  // outlet,
+  menuItem,
+  order,
+  outlet,
 };
